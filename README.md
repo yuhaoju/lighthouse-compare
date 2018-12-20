@@ -2,6 +2,14 @@
 
 **Note: This is the pre-alpha version.**
 
+## Feature
+
+### What is Lighthouse?
+Lighthouse is a tool built and open sourced by Google, which is to improve the quality of web apps.
+
+### Lighthouse Compare?
+The goal of Ligthouse Compare is to monitor and keep web app’s quality by running Lighthouse in CI and compare reports so that developers can see how a particular changeset influenced the score or any of the audits.
+
 ## Installation
 ```
 $ npm install lighthouse-compare lighthouse --save
