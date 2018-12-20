@@ -1,6 +1,6 @@
 # lighthouse-compare
 
-**Note: This is just pre-alpha version**
+**Note: This is the pre-alpha version.**
 
 ## Installation
 ```
