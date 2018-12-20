@@ -61,7 +61,7 @@ async function main(options) {
   });
 
   try {
-    // await sendReport(audits, categories);
+    await sendReport(audits, categories);
     console.log(`[lighthouse-compare] Report sent! Please check https://lighthouse-compare-service.herokuapp.com/app/${TRAVIS_REPO_SLUG}/report/${TRAVIS_JOB_ID}`);
   } catch (error) {
     console.log('Encounter an error when posting data.');
