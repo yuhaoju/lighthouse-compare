@@ -56,4 +56,5 @@ addons:
 ## TODO
 
 - Wrap the service with Github App
+- Comment in Pull Request (score and audits diff)
 - Cli tool
