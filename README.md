@@ -40,3 +40,7 @@ addons:
 ```
 
 3. You should be able to see the report link in the CI logs.
+![image](https://user-images.githubusercontent.com/4938243/50292010-03222980-04ab-11e9-9bc4-7c0228101a74.png)
+
+4. Click into the link and you can see the report.
+![image](https://user-images.githubusercontent.com/4938243/50292071-277e0600-04ab-11e9-9710-e1af85bbeb91.png)
