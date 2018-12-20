@@ -50,7 +50,7 @@ addons:
 3. You should be able to see the report link in the CI logs.
 ![image](https://user-images.githubusercontent.com/4938243/50292010-03222980-04ab-11e9-9bc4-7c0228101a74.png)
 
-4. Click into the link and you can see the report.
+4. Click into the link and you can see the report ([example](https://lighthouse-compare-service.herokuapp.com/app/yuhaoju/lc-test-app/report/166470060)).
 ![image](https://user-images.githubusercontent.com/4938243/50293506-bb9d9c80-04ae-11e9-9d0b-7d762eae94f8.png)
 
 ## TODO
