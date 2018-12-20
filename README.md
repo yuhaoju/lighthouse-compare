@@ -1,5 +1,7 @@
 # lighthouse-compare
 
+**Note: This is just pre-alpha version**
+
 ## Installation
 ```
 $ npm install lighthouse-compare lighthouse --save
