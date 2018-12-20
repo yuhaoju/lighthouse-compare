@@ -14,11 +14,11 @@ $ npm install lighthouse-compare lighthouse --save
 const cp = require('child_process');
 const compare = require('lighthouse-compare');
 
-// build and serve
+// build and start to serve locally
 cp.execSync('yarn build', { stdio: 'inherit' });
 const proc = cp.spawn('yarn', ['serve']);
 
-// run local compare
+// run lighthouse analysing
 compare.run({ url: 'http://localhost:5001' });
 ```
 
@@ -29,7 +29,7 @@ A `.travis.yml` example:
 sudo: required
 dist: trusty
 
-# ...
+# other config
 
 # run your test script
 script: node ./test.js
@@ -43,4 +43,9 @@ addons:
 ![image](https://user-images.githubusercontent.com/4938243/50292010-03222980-04ab-11e9-9bc4-7c0228101a74.png)
 
 4. Click into the link and you can see the report.
-![image](https://user-images.githubusercontent.com/4938243/50292071-277e0600-04ab-11e9-9710-e1af85bbeb91.png)
+![image](https://user-images.githubusercontent.com/4938243/50293506-bb9d9c80-04ae-11e9-9d0b-7d762eae94f8.png)
+
+## TODO
+
+- Wrap the service with Github App
+- Cli tool
