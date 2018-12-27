@@ -1,6 +1,6 @@
 # lighthouse-compare
 
-**Note: This is the pre-alpha version. Please contact [me](mailto:yuhaoju0623@gmail.com) to get the API token if you want to use and help improve this service :slightly_smiling_face:**
+**Note: This is the pre-alpha version. Please contact [me](mailto:yuhaoju0623@gmail.com) to get the API token if you want to use and help improve this service :slightly_smiling_face:.**
 
 ## Feature
 
