@@ -8,9 +8,11 @@ const {
   TRAVIS_REPO_SLUG,
   TRAVIS_JOB_ID,
   TRAVIS_PULL_REQUEST,
+  LIGHTHOUSE_COMPARE_API_TOKEN,
 } = process.env;
 
 const reportName = './lh-report.json';
+const host = 'http://ec2-3-81-97-97.compute-1.amazonaws.com';
 
 function launchChromeAndRunLighthouse(url) {
   // use cli to disable network throttling, lighthouse doesn't support disable it programally
@@ -23,7 +25,7 @@ function launchChromeAndRunLighthouse(url) {
 }
 
 async function sendReport(audits, categories) {
-  const apiUrl = 'https://lighthouse-compare-service.herokuapp.com/api/report/create';
+  const apiUrl = `${host}/api/report`;
   const postData = {
     commit_hash: TRAVIS_PULL_REQUEST_SHA || TRAVIS_COMMIT,
     repo_id: TRAVIS_REPO_SLUG,
@@ -35,6 +37,7 @@ async function sendReport(audits, categories) {
   await superagent
     .post(apiUrl)
     .send(postData)
+    .set('authorization', LIGHTHOUSE_COMPARE_API_TOKEN || '')
     .set('Content-Type', 'application/json')
 }
 
@@ -62,7 +65,7 @@ async function main(options) {
 
   try {
     await sendReport(audits, categories);
-    console.log(`[lighthouse-compare] Report sent! Please check https://lighthouse-compare-service.herokuapp.com/app/${TRAVIS_REPO_SLUG}/report/${TRAVIS_JOB_ID}`);
+    console.log(`[lighthouse-compare] Report sent! Please check ${host}/app/${TRAVIS_REPO_SLUG}/report/${TRAVIS_JOB_ID}`);
   } catch (error) {
     console.log('Encounter an error when posting data.');
   }
